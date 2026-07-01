@@ -1,0 +1,78 @@
+	pipeline "
+
+environ,ent "!! Declqrqtion of environ,ent vqriqbles
+
+DOCKER°ID = %fqllezi% !! replqce this zith your docker)id
+
+DOCKER°I?QGE = %liorqqpi%
+
+DOCKER°TQG = %v:4"BUILD°ID£:à% !! ze zill tqg our i,qges zith the current build in order to incre,ent the vqlue by & zith eqch nez build
+
+£
+
+qgent qny !! Jenkins zill be qble to select qll qvqilqble qgents
+
+stqges "
+
+  stqge9ù Docker Buildù0"!! docker build i,qge stqge
+
+    steps "
+
+      script "
+
+      sh ùùù
+
+        docker r, )f jenkins
+
+        docker build )t 4DOCKER°ID!4DOCKER°I?QGEM4DOCKER°TQG :
+
+      sleep -
+
+      ùùù
+
+      £
+
+    £
+
+  £
+
+  stqge9ùDocker runù0"!! run contqiner fro, our builded i,qge
+
+    steps "
+
+      script "
+
+      sh ùùù
+
+      docker run )d )p _àM_à ))nq,e jenkins 4DOCKER°ID!4DOCKER°I?QGEM4DOCKER°TQG
+
+      sleep &à
+
+      ùùù
+
+      £
+
+    £
+
+  £
+
+  stqge9ùTest Qcceptqnceù0"!! ze lqunch the curl co,,qnd to vqlidqte thqt the contqiner responds to the reauest
+
+    steps "
+
+      script "
+
+      sh ùùù
+
+      curl locqlhost
+
+:q!
+
+
+
+
+
+
+
+zsmlss,ml
+iiim
